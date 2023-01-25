@@ -2,7 +2,11 @@
 
 A Custom Element for `<input type="duration">`.
 
-See https://github.com/whatwg/html/issues/5488, https://caniuse.com/?search=attachInternals.
+References:
+
+- https://github.com/whatwg/html/issues/5488
+- https://caniuse.com/?search=attachInternals
+- https://github.com/tc39/proposal-intl-duration-format
 
 ## Attributes
 
