@@ -71,11 +71,12 @@ class InputDurationElement extends HTMLElement {
     if (hours > 99) this.hourInput.max = 999
 
     this.hourInput.value = hours
-    this.minuteInput.value = minutes
-    this.secondInput.value = seconds
+    this.minuteInput.value = minutes.toString().padStart(2, '0')
+    this.secondInput.value = seconds.toString().padStart(2, '0')
+
     this.hourInput.size = hours.toString().length
-    this.minuteInput.size = minutes.toString().length
-    this.secondInput.size = seconds.toString().length
+    this.minuteInput.size = 2
+    this.secondInput.size = 2
 
     function pluralize(number, string) {
       return `${number} ${number === 1 ? string : `${string}s`}`
@@ -98,8 +99,6 @@ class InputDurationElement extends HTMLElement {
       <style id="baseCSS">
       :host {
         display: block;
-      }
-      #input {
         font-size: small;
         display: inline-flex;
         align-items: end;
@@ -109,23 +108,28 @@ class InputDurationElement extends HTMLElement {
         margin: 0.4em 0;
         gap: 0.4em;
       }
-      #input:focus-within {
+      :host(:focus-within) {
         outline: 1px solid blue;
       }
-      input { appearance: none; border: 0; text-align: center; padding: 0; line-height: inherit; padding: 0; }
+      input {
+        background: transparent; 
+        appearance: none; 
+        border: 0; 
+        text-align: center; 
+        padding: 0; 
+        line-height: inherit; 
+      }
       input:focus { outline: none }
-      input[max="0"], input[max="0"] + [part="divider"] { display: none }
+      span:empty, input[max="0"], input[max="0"] + [part="divider"] { display: none }
       #label { position: absolute; top: -500px }
       </style>
-      <div id="input" part="input">
-        <input type="number" step="1" min="0" max="99" data-hour aria-label="hour">
-        <slot name="hour" part="divider">:</slot>
-        <input type="number" step="1" min="0" max="60" data-minute aria-label="minute">
-        <slot name="minute" part="divider">:</slot>
-        <input type="number" step="1" min="0" max="60" data-second aria-label="second">
-        <slot name="second" part="divider"></slot>
-        <span aria-live="polite" id="label"></span>
-      </div>
+      <input type="number" step="1" min="0" max="99" data-hour aria-label="hour">
+      <slot name="hour" part="divider"><span>:</span></slot>
+      <input type="number" step="1" min="0" max="60" data-minute aria-label="minute">
+      <slot name="minute" part="divider"><span>:</span></slot>
+      <input type="number" step="1" min="0" max="60" data-second aria-label="second">
+      <slot name="second" part="divider"><span></span></slot>
+      <span aria-live="polite" id="label"></span>
     `
 
     this.secondInput  = this.shadowRoot.querySelector('[data-second]')

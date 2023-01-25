@@ -14,29 +14,37 @@
 <body>
   <h1><code>&lt;input-duration&gt;</code></h1>
   <form>
+    <fieldset>
     <label for="duration">Duration (max 180s)</label>
     <input-duration id="duration" name="duration" max="180"></input-duration>
-    <button>Submit</button>
+    <button type="submit">Submit</button>
+    </fieldset>
   </form>
   <form>
+    <fieldset>
     <label for="default">Duration (default 123s)</label>
     <input-duration id="default" name="duration" value="123"></input-duration>
-    <button>Submit</button>
+    <button type="submit">Submit</button>
+    </fieldset>
   </form>
   <form>
+    <fieldset>
     <label for="dividers">Duration (custom dividers)</label>
     <input-duration id="dividers" name="duration">
       <span slot="hour">時</span>
       <span slot="minute">分</span>
       <span slot="second">秒</span>
     </input-duration>
-    <button>Submit</button>
+    <button type="submit">Submit</button>
+    </fieldset>
   </form>
 
   <script>
-    document.querySelector('input-duration').addEventListener('change', (event) => {
-      console.log(`Change event: ${event.currentTarget.value}`)
-    })
+    for (const input of document.querySelectorAll('input-duration')) {
+      input.addEventListener('change', (event) => {
+        console.log(`Change event: ${event.currentTarget.value}`)
+      })
+    }
   </script>
 </body>
 

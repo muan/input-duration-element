@@ -17,7 +17,6 @@ References:
 
 ## Shadow Parts
 
-- `::part(input)`: Inputs.
 - `::part(divider)`: Divider (`:`).
 
 ## Slots
