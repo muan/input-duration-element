@@ -11,8 +11,9 @@ References:
 
 ## Attributes
 
-- `value` (`number`): Default value of duration in seconds.
+- `max` (`number`): Max value of duration in seconds.
 - `name` (`string`): Input name.
+- `value` (`number`): Default value of duration in seconds.
 
 ## Shadow Parts
 
