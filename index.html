@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Input type=duration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="input-duration-element.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/muan.css"/>
+  <style>
+  </style>
+</head>
+
+<body>
+  <h1><code>&lt;input-duration&gt;</code></h1>
+  <form>
+    <label for="duration">Duration (max 64000s)</label>
+    <input-duration id="max" name="duration" max="64000"></input-duration>
+    <button>Submit</button>
+    <label for="duration">Duration (default 123s)</label>
+    <input-duration id="default" name="duration" value="123"></input-duration>
+    <button>Submit</button>
+  </form>
+
+  <script>
+    document.querySelector('input-duration').addEventListener('change', (event) => {
+      console.log(`Change event: ${event.currentTarget.value}`)
+    })
+  </script>
+</body>
+
+</html>

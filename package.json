@@ -1,0 +1,17 @@
+{
+  "name": "input-duration-element",
+  "version": "0.0.1",
+  "description": "<input-duration> imitates <input type=duration>.",
+  "main": "input-duration-element.js",
+  "module": "input-duration-element.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "input",
+    "custom element",
+    "durations"
+  ],
+  "author": "Mu-An Chiou",
+  "license": "MIT"
+}
