@@ -24,7 +24,7 @@ References:
 
 - `hour`: Default to `:`.
 - `minute`: Default to `:`.
-- `second`:  Default to ``.
+- `second`:  Default to empty.
 
 ## Methods
 
