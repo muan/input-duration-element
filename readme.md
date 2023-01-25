@@ -17,8 +17,14 @@ References:
 
 ## Shadow Parts
 
-- `::part(input)`: Input.
+- `::part(input)`: Inputs.
 - `::part(divider)`: Divider (`:`).
+
+## Slots
+
+- `hour`: Default to `:`.
+- `minute`: Default to `:`.
+- `second`:  Default to ``.
 
 ## Methods
 

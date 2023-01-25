@@ -100,9 +100,11 @@ class InputDurationElement extends HTMLElement {
         display: block;
       }
       #input {
+        font-size: small;
         display: inline-flex;
+        align-items: end;
         border: 1px solid;
-        padding: 0 0.4em;
+        padding: 0.2em 0.4em;
         overflow: hidden;
         margin: 0.4em 0;
         gap: 0.4em;
@@ -110,17 +112,18 @@ class InputDurationElement extends HTMLElement {
       #input:focus-within {
         outline: 1px solid blue;
       }
-      input { appearance: none; border: 0; text-align: center; padding: 0; }
+      input { appearance: none; border: 0; text-align: center; padding: 0; line-height: inherit; padding: 0; }
       input:focus { outline: none }
       input[max="0"], input[max="0"] + [part="divider"] { display: none }
       #label { position: absolute; top: -500px }
       </style>
       <div id="input" part="input">
         <input type="number" step="1" min="0" max="99" data-hour aria-label="hour">
-        <span part="divider">:</span>
+        <slot name="hour" part="divider">:</slot>
         <input type="number" step="1" min="0" max="60" data-minute aria-label="minute">
-        <span part="divider">:</span>
+        <slot name="minute" part="divider">:</slot>
         <input type="number" step="1" min="0" max="60" data-second aria-label="second">
+        <slot name="second" part="divider"></slot>
         <span aria-live="polite" id="label"></span>
       </div>
     `
