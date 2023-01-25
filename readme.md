@@ -31,3 +31,4 @@ References:
 ## Todo
 
 - Support `min`
+- Validation
