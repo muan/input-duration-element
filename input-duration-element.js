@@ -98,10 +98,10 @@ class InputDurationElement extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style id="baseCSS">
       :host {
-        display: block;
         font-size: small;
         display: inline-flex;
         align-items: end;
+        box-sizing: border-box;
         border: 1px solid;
         padding: 0.2em 0.4em;
         overflow: hidden;
@@ -146,3 +146,5 @@ class InputDurationElement extends HTMLElement {
 }
 
 window.customElements.define('input-duration', InputDurationElement)
+
+export default InputDurationElement
