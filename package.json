@@ -1,6 +1,6 @@
 {
   "name": "input-duration-element",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "<input-duration> imitates <input type=duration>.",
   "main": "input-duration-element.js",
   "module": "input-duration-element.js",
