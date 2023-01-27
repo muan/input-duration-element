@@ -52,3 +52,4 @@ References:
 
 - Support `min`
 - Validation
+- Figure out `maxLength`, `max`, `size`.
