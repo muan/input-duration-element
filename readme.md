@@ -4,10 +4,13 @@ A Custom Element for `<input type="duration">`.
 
 References:
 
-- https://github.com/whatwg/html/issues/5488
-- https://caniuse.com/?search=attachInternals
-- https://wpt.fyi/results/custom-elements/HTMLElement-attachInternals.html
-- https://github.com/tc39/proposal-intl-duration-format
+- Browser support
+  - https://caniuse.com/?search=attachInternals
+  - https://wpt.fyi/results/custom-elements/HTMLElement-attachInternals.html
+  - https://webkit.org/blog/13703/release-notes-for-safari-technology-preview-162/
+- Web standards
+  - https://github.com/whatwg/html/issues/5488
+  - https://github.com/tc39/proposal-intl-duration-format
 
 ## Attributes
 
