@@ -9,7 +9,7 @@ class InputDurationElement extends HTMLElement {
   
   connectedCallback() {
     if (this._connected) return
-    this.setupInputs()
+    this._setupInputs()
     this._connected = true
     this.defaultValue = Number(this.getAttribute('value')) || 0
     this.value = this.defaultValue
@@ -94,7 +94,7 @@ class InputDurationElement extends HTMLElement {
     this.value = this._calculateTimeInSeconds()
   }
 
-  setupInputs() {
+  _setupInputs() {
     this.shadowRoot.innerHTML = `
       <style id="baseCSS">
       :host {
