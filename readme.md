@@ -12,6 +12,17 @@ References:
   - https://github.com/whatwg/html/issues/5488
   - https://github.com/tc39/proposal-intl-duration-format
 
+## Usage
+
+```html
+<!-- Include `InputDurationElement` -->
+<script src="https://unpkg.com/input-duration-element@0.0.4" type="module"></script>
+
+<!-- Render `<input-duration>` -->
+<label for="duration">Duration</label>
+<input-duration id="duration" name="duration"></input-duration>
+```
+
 ## Attributes
 
 - `max` (`number`): Max value of duration in seconds.
