@@ -6,7 +6,8 @@ References:
 
 - Browser support
   - https://caniuse.com/?search=attachInternals
-  - https://wpt.fyi/results/custom-elements/HTMLElement-attachInternals.html
+  - Stable: https://wpt.fyi/results/custom-elements/HTMLElement-attachInternals.html?label=master&label=stable&aligned&view=subtest
+  - Experimental: https://wpt.fyi/results/custom-elements/HTMLElement-attachInternals.html
   - https://webkit.org/blog/13703/release-notes-for-safari-technology-preview-162/
 - Web standards
   - https://github.com/whatwg/html/issues/5488
