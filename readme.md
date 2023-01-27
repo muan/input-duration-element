@@ -5,7 +5,6 @@ A Custom Element for `<input type="duration">`.
 References:
 
 - Browser support
-  - https://caniuse.com/?search=attachInternals
   - Stable: https://wpt.fyi/results/custom-elements/HTMLElement-attachInternals.html?label=master&label=stable&aligned&view=subtest
   - Experimental: https://wpt.fyi/results/custom-elements/HTMLElement-attachInternals.html
   - https://webkit.org/blog/13703/release-notes-for-safari-technology-preview-162/
